@@ -6,6 +6,17 @@
 
 def solution(array, commands):
     # TODO: 직접 작성한 풀이로 아래 예외를 교체하세요.
+    answer = []
+    for command in commands:
+        start, end, index = command
+        # print("값:", start, end, index)
+        arraylist = array[start-1:end]
+        #arraylist.sort()
+        arraylist = sorted(arraylist)
+        answer.append(arraylist[index-1])
+
+
+    return answer
     raise NotImplementedError("아직 풀이를 작성하지 않았습니다.")
 
 
