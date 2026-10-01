@@ -6,7 +6,49 @@
 
 def solution(nums):
     # TODO: 직접 작성한 풀이로 아래 예외를 교체하세요.
-    raise NotImplementedError("아직 풀이를 작성하지 않았습니다.")
+    # setlist = set(nums)
+    # print(setlist) # 세트 생성(중복제거)
+    # 딕셔너리 생성
+
+    # dictlist = {}
+    # for i in nums:
+    #     if dictlist == None:
+    #         dictlist = {i:0}
+
+    #     else:
+    #         for k, v in dictlist:
+    #             print("들어옴?")
+    #             if i == k:
+    #                 v += 1
+    #             else:
+    #                 dictlist.update(i = 0)
+    # print(dictlist)
+
+    answer = 0
+    maxcount = len(nums) // 2
+    my_dict = {}
+
+    # 리스트 값들 딕셔너리로 변환
+    for num in nums:
+        if num in my_dict:
+            my_dict[num] += 1
+        else:
+            #my_dict.update(num = 0) 왜 update는 못쓰지??
+            my_dict[num] = 1
+    # print(my_dict)
+    
+    # 딕셔너리 개수 세는 것도 len 활용
+    while(answer == 0):
+        if maxcount == len(my_dict):
+            answer = maxcount
+        elif maxcount > len(my_dict):
+            maxcount -= 1 
+        elif maxcount < len(my_dict):
+            answer = maxcount
+    
+    return answer
+    
+    # raise NotImplementedError("아직 풀이를 작성하지 않았습니다.")
 
 
 if __name__ == "__main__":
