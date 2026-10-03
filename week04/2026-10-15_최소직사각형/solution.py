@@ -6,6 +6,61 @@
 
 def solution(sizes):
     # TODO: 직접 작성한 풀이로 아래 예외를 교체하세요.
+    # for idx,size in enumerate(sizes):
+    #     if idx == 0:
+    #         max_w = size[0]
+    #         max_h = size[0]
+    #         continue
+    #     if max_w < size[0]:
+    #         max_w = size[0]
+    #         # w_idx = idx
+    #     if max_h < size[1]:
+    #         max_h = size[1]
+    #         # h_idx = idx
+
+
+
+    # w_idx = sorted(sizes, key = lambda x: (-x[0], -x[1]))
+    # h_idx = sorted(sizes, key = lambda x: (-x[1], -x[0]))
+    # max_w = 0
+    # max_h = 0
+    # if w_idx[max_w][0] == h_idx[max_h][1]:
+    #      return w_idx[max_w][0] * h_idx[max_h][1]
+    
+    # if w_idx[max_w][0] > h_idx[max_h][1]:
+    #     maximum = w_idx[max_w][0]
+    #     minimum = w_idx[max_w][1]
+    #     max_w += 1
+    #     for idx in (max_w, len(w_idx) - 1):
+    #         if min(w_idx[idx][0], w_idx[idx][1]) > minimum:
+    #             minimum = min(w_idx[idx][0], w_idx[idx][1])
+    #     return maximum * minimum
+
+    # if w_idx[max_w][0] < h_idx[max_h][1]:
+    #     maximum = h_idx[max_h][0]
+    #     minimum = h_idx[max_h][1]
+    #     max_h += 1
+    #     for idx in (max_h, len(h_idx) - 1):
+    #         if min(h_idx[idx][0], h_idx[idx][1]) > minimum:
+    #             minimum = min(h_idx[idx][0], h_idx[idx][1])
+    #     return maximum * minimum
+
+    #print(max_w, max_h)
+    # #print(w_idx, h_idx)
+    # idx = 0
+    # if w_idx[max_w][0] == h_idx[max_h][1]:
+    #     return w_idx[max_w][0] * h_idx[max_h][1]
+    # while True:
+    #     if max(w_idx[max_w][0], w_idx[max_w][1]) > max(h_idx[max_h][0], h_idx[max_h][1]):
+    #         if min(w_idx[max_w][0], w_idx[max_w][1]) > min(h_idx[max_h][0], h_idx[max_h][1]):
+    #             max_h += 1
+    #         else:
+    #             return w_idx[max_w][0] * min(h_idx[max_h][0], h_idx[max_h][1])
+    #     else:
+    #         if min(w_idx[max_w][0], w_idx[max_w][1]) < min(h_idx[max_h][0], h_idx[max_h][1]):
+    #             max_w += 1
+    #         else:
+    #             return h_idx[max_h][1] * min(w_idx[max_w][0], w_idx[max_w][1])
     raise NotImplementedError("아직 풀이를 작성하지 않았습니다.")
 
 
