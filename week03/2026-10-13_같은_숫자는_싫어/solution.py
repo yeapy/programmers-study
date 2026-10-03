@@ -6,7 +6,32 @@
 
 def solution(arr):
     # TODO: 직접 작성한 풀이로 아래 예외를 교체하세요.
-    raise NotImplementedError("아직 풀이를 작성하지 않았습니다.")
+    # for i in range(0, len(arr)-1):
+    #     print(i)
+    #     # if (i > 0) and (arr[i-1] == arr[i]):
+    #     #         arr.pop(i)
+    # print(arr)
+
+    # for idx,value in enumerate(arr):
+    #     if idx != 0:
+    #         if before == value:
+    #             arr.pop(idx)
+    #     before = value
+
+    answer = []
+    for idx,value in enumerate(arr):
+            if idx != 0:
+                if before != value:
+                     answer.append(value)
+            else:
+                 answer.append(value)
+            before = value
+
+    # print(answer)
+
+    return answer
+
+    #raise NotImplementedError("아직 풀이를 작성하지 않았습니다.")
 
 
 if __name__ == "__main__":

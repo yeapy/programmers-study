@@ -6,6 +6,7 @@
 
 def solution(nums):
     # TODO: 직접 작성한 풀이로 아래 예외를 교체하세요.
+    return min(len(nums) //2 , len(set(nums)))
     raise NotImplementedError("아직 풀이를 작성하지 않았습니다.")
 
 
