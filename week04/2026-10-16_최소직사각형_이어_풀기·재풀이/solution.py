@@ -3,9 +3,26 @@
 함수 매개변수와 공식 입출력 예 확인: 2026-09-30.
 """
 
+'''
+1. 명함 다 담을 수 잇는 거
+2. 명함 눕힐 수 있음(가로 세로 바꿀 수 있다)
+3. 그거의 가로 * 세로
+
+명함을 눕힐 수 있으니 그중 가장 긴 값 구하고, 명함 중 가장 긴 값은 그거로 무마되니 작은 값 중 최대값을 구한다
+'''
 
 def solution(sizes):
-    # TODO: 직접 작성한 풀이로 아래 예외를 교체하세요.
+    maximum = 0
+    for size in sizes:
+        if maximum < max(size):
+            maximum = max(size)
+
+    minimum = 0
+    for size in sizes:
+        if minimum < min(size):
+            minimum = min(size)
+
+    return maximum * minimum
     raise NotImplementedError("아직 풀이를 작성하지 않았습니다.")
 
 
