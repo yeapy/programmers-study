@@ -6,17 +6,24 @@
 
 def solution(participant, completion):
 
-    answer = []
-    answer.extend(participant)
+    my_dict = {}
 
+    for person in participant:
+        if person in my_dict:
+            my_dict[person] += 1
+        else:
+            my_dict[person] = 1
+    
     for person in completion:
-        if person in participant:
-            answer.remove(person)
-
+        if person in my_dict:
+            my_dict[person] -= 1
     
-
-    return ''.join(answer)
+    print(my_dict)
     
+    for k, v in my_dict.items():
+        if v == 1:
+            return k
+        
     raise NotImplementedError("아직 풀이를 작성하지 않았습니다.")
 
 
