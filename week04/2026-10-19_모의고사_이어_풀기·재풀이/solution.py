@@ -5,7 +5,29 @@
 
 
 def solution(answers):
-    # TODO: 직접 작성한 풀이로 아래 예외를 교체하세요.
+    one = [1,2,3,4,5]
+    two = [2,1,2,3,2,4,2,5]
+    three = [3,3,1,1,2,2,4,4,5,5]
+
+    result = [0,0,0]
+
+    for i in range(len(answers)):
+        if answers[i] == one[i % len(one)]:
+            result[0] += 1
+
+        if answers[i] == two[i % len(two)]:
+            result[1] += 1
+
+        if answers[i] == three[i % len(three)]:
+            result[2] += 1
+
+    maximum = max(result)
+    answer = []
+    for idx, value in enumerate(result):
+        if value == maximum:
+            answer.append(idx + 1)
+
+    return answer
     raise NotImplementedError("아직 풀이를 작성하지 않았습니다.")
 
 
